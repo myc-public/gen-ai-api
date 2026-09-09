@@ -1,0 +1,55 @@
+server:
+  port: 8081
+
+app:
+  ai:
+    provider: openai #or vertexai #or openai
+
+
+spring:
+  application:
+    name: gen-ai-java-spring
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: https://api.openai.com # http://localhost:12434/engines/llama.cpp #  # https://router.huggingface.co
+      chat:
+        options:
+          model: gpt-4o # ai/gemma3  # gpt-4o
+
+    google:
+      genai:
+        project-id: poc-spring-ai-506519
+        location: us-central1
+        chat:
+          options:
+            model: gemini-2.5-flash
+
+    huggingface:
+      api-key: ${HUGGINGFACE_API_KEY}
+      url: https://ayopvm5m9hcckexq.us-east-1.aws.endpoints.huggingface.cloud
+      chat:
+        options:
+          model: Qwen/Qwen2.5-Coder-7B-Instruct
+          max-new-tokens: 1024
+          temperature: 0.7
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: custom-mistral-model:latest
+     #     max-new-tokens: 512
+     #     temperature: 0.7
+logging:
+  level:
+    root: INFO
+    com.gen-ai-java-spring: INFO
+    org.springframework.ai: INFO
+
+#  TODO à activer le profil observability pour activer l'envoi des logs vers Loki
+#observability:
+#  loki:
+#    url: ${LOKI_URL:http://loki:3100/loki/api/v1/push}
+#    job: ${LOKI_JOB:gen-ai-java-spring}
+#    timeout-ms: ${LOKI_TIMEOUT_MS:5000}
+#ya29:a0AdMD6Ei0eAqwpD5_Mt2bWOOmBz_WAGgewDgoanBsaWQ63O8k3MvuKlZrKTZDN2pAoaiWWMaK_kYA_5x8cGhOj4yvfM9mjYkwwrk5tU3_bFOUz5rlFtT8XJGxkvZz7XuVLCR8t5gpsoBiOtPpL5dZSHZ0KxYwn2NuICsBp_BrsidbemezfPVjp7yjVCSzzOKzDvXwk0nOSxLPXck3al5zAjOOXmDlp6aZfj3ZGSQlSS2hsX3x8ni1-dJJqGd5NOl6auamnOeNFmAn9HJu-kTa-QKPbURAcfVpBVUy3qnGjx1JQGKdCEK-st_3AVLGmr6HbX4Lrn-oMRDIlWh1PjGtShCT0oVaSTDwhYOcva_axPhjHFWlaCgYKAR0SARMSFQHGX2MiTIAI31rVyc5Xv9F77dLPTg0375:

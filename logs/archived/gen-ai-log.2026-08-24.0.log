@@ -1,0 +1,84 @@
+2026-08-24 10:38:00 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-24 10:38:01 [tomcat-shutdown] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-24 10:38:05 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 22476 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-24 10:38:05 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-24 10:38:06 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-24 10:38:06 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-24 10:38:06 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-24 10:38:06 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-08-24 10:38:07 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1264 ms
+2026-08-24 10:38:08 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-24 10:38:08 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-24 10:38:08 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 3.395 seconds (process running for 4.128)
+2026-08-24 10:38:29 [http-nio-8081-exec-2] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-24 10:38:29 [http-nio-8081-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-24 10:38:29 [http-nio-8081-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-08-24 10:38:34 [http-nio-8081-exec-2] INFO  traceId= spanId= c.g.j.s.c.o.OpenAIChatController - Summarization text: Output:
+
+Action Items:
+* Migrate parts of the backend to microservices for scalability.
+* Implement real-time fraud detection using machine learning.
+* Design faster checkout flows with fewer confirmation steps.
+* Introduce biometric authentication options like Face ID and fingerprint login.
+
+Decisions:
+* Proceed with technical upgrades and UX enhancements in parallel.
+* Ensure coordination across engineering, design, and marketing.
+2026-08-24 17:40:35 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - Starting GenAiJavaSpringApplicationTests using Java 17.0.9 with PID 18060 (started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-24 17:40:35 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-08-24 17:40:39 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - Started GenAiJavaSpringApplicationTests in 4.714 seconds (process running for 6.949)
+2026-08-24 17:45:52 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 20864 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-24 17:45:52 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-24 17:45:53 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-24 17:45:53 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-24 17:45:53 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-24 17:45:53 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-08-24 17:45:53 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 935 ms
+2026-08-24 17:45:54 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-24 17:45:54 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-24 17:45:54 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 2.529 seconds (process running for 3.092)
+2026-08-24 17:51:35 [http-nio-8081-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-24 17:51:35 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-24 17:51:35 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2026-08-24 17:51:35 [http-nio-8081-exec-1] WARN  traceId= spanId= o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.genai.java.spring.chat.openai.OpenAIChatController.summarizeWithOpenAIJavaClient(java.lang.String)]
+2026-08-24 17:52:13 [http-nio-8081-exec-4] INFO  traceId= spanId= c.g.j.s.c.o.OpenAIChatController - Summarization text: [{index=0, message={role=assistant, content=Désolé, mais vous n'avez pas fourni le contenu de la réunion pour le résumé. Pouvez-vous, s'il vous plaît, fournir des détails afin que je puisse vous aider avec un résumé?, refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}]
+2026-08-24 17:58:32 [http-nio-8081-exec-7] INFO  traceId= spanId= c.g.j.s.c.o.OpenAIChatController - Summarization text: [{index=0, message={role=assistant, content=Apologies, but as per your instruction, I'm unable to provide a summarization for the given text as it doesn't contain any specific meeting notes. Please provide the relevant meeting notes text to summarize., refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}]
+2026-08-24 18:03:24 [http-nio-8081-exec-10] INFO  traceId= spanId= c.g.j.s.c.o.OpenAIChatController - Summarization text: [{index=0, message={role=assistant, content=Action Items:
+* Improve technical reliability and user experience for mobile payment solution.
+* Migrate parts of the backend to microservices to boost scalability.
+* Implement real-time fraud detection using machine learning.
+* Simplify checkout flows and reduce confirmation steps.
+* Add biometric authentication options like Face ID and fingerprint login.
+* Ensure smoother payments to increase retention and customer satisfaction.
+
+Decisions:
+* Technical upgrades and UX enhancements for mobile payment solution to proceed in parallel.
+* Coordination required across engineering, design, and marketing., refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}]
+2026-08-24 18:06:30 [http-nio-8081-exec-1] INFO  traceId= spanId= c.g.j.s.c.o.OpenAIChatController - Summarization text: [{index=0, message={role=assistant, content=Compte rendu de réunion :
+
+Lors de la réunion de planification du troisième trimestre, des améliorations ont été discutées pour la solution de paiement mobile, centrées sur la fiabilité technique et l'expérience utilisateur. 
+
+Exemple de résultat :
+
+Actions :
+
+* Migrer une partie du backend vers des microservices pour améliorer l'évolutivité.
+* Ajouter une détection de fraude en temps réel grâce à l'apprentissage automatique.
+* Optimiser les processus de paiement et réduire le nombre d'étapes de confirmation.
+* Ajouter des options d'authentification biométrique, par exemple, la reconnaissance faciale et l'authentification par empreinte digitale.
+
+Décisions :
+
+* L'amélioration de la fiabilité technique et de l'expérience utilisateur doit être menée en parallèle.
+* Les équipes d'ingénierie, de conception et de marketing doivent coordonner leurs efforts pour atteindre ces objectifs.
+* Une expérience de paiement plus fluide peut améliorer la fidélisation et la satisfaction client., refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}]
+2026-08-24 18:07:48 [http-nio-8081-exec-5] INFO  traceId= spanId= c.g.j.s.c.o.OpenAIChatController - Summarization text: [{index=0, message={role=assistant, content="Action Items:
+* Improve technical reliability and user experience for the mobile payment system.
+* Initiate migration of backend to microservices for scalability.
+* Implement real-time fraud detection using machine learning.
+* Simplify and speed up checkout flows by reducing confirmation steps.
+* Incorporate biometric authentication options like Face ID and fingerprint login.
+Decisions:
+* Plan simultaneous technical upgrades and UX enhancements.
+* Engineering, design, and marketing teams to coordinate in these initiatives.
+* Emphasize on smoother payments for increased customer retention and satisfaction.", refusal=null, annotations=[]}, logprobs=null, finish_reason=stop}]

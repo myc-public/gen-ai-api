@@ -1,0 +1,1133 @@
+2026-08-26 10:34:17 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - Starting GenAiJavaSpringApplicationTests using Java 17.0.9 with PID 25476 (started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 10:34:17 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 10:34:23 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - Started GenAiJavaSpringApplicationTests in 6.416 seconds (process running for 8.635)
+2026-08-26 10:35:35 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 24188 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 10:35:35 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 10:35:36 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 10:35:36 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 10:35:36 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 10:35:36 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 10:35:36 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 10:35:36 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1557 ms
+2026-08-26 10:35:38 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 10:35:38 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 10:35:38 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 4.065 seconds (process running for 5.113)
+2026-08-26 10:35:53 [http-nio-8081-exec-3] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-26 10:35:53 [http-nio-8081-exec-3] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-26 10:35:53 [http-nio-8081-exec-3] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-26 10:36:00 [http-nio-8081-exec-3] INFO  traceId= spanId= c.g.j.s.c.g.GoogleVertexAIController - JavaDoc generation response: ChatClientResponse[chatResponse=ChatResponse [metadata={ id: chatcmpl-EH4L0HvoKKVaPSGkfTB85AWeCa5kz, usage: DefaultUsage{promptTokens=146, completionTokens=150, totalTokens=296}, rateLimit: { @type: org.springframework.ai.openai.metadata.OpenAiRateLimit, requestsLimit: 500, requestsRemaining: 499, requestsReset: PT0.12S, tokensLimit: 30000; tokensRemaining: 29817; tokensReset: PT0.366S } }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=```java
+/**
+ * Handles POST requests to generate JavaDoc comments for the given input message.
+ * This method interacts with a chat client to process the input and generate JavaDoc comments.
+ *
+ * @param message the input message containing code for which JavaDoc comments need to be generated.
+ * @return a {@link ChatClientResponse} containing the generated JavaDoc comments.
+ */
+@PostMapping("/generate-java-docs")
+public ChatClientResponse generateJavaDocs(@RequestBody String message) {
+    ChatClientResponse response = chatClient.prompt()
+            .user(message)
+            .system(SYSTEM_PROMPT)
+            .call()
+            .chatClientResponse();
+    log.info("JavaDoc generation response: {}", response.toString());
+    return response;
+}
+```, metadata={role=ASSISTANT, messageType=ASSISTANT, finishReason=STOP, refusal=, index=0, annotations=[], id=chatcmpl-EH4L0HvoKKVaPSGkfTB85AWeCa5kz}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='STOP', filters=0, metadata=0]]]], context={}]
+2026-08-26 10:54:56 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - Starting GenAiJavaSpringApplicationTests using Java 17.0.9 with PID 12536 (started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 10:54:56 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 10:55:02 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - Started GenAiJavaSpringApplicationTests in 6.943 seconds (process running for 9.281)
+2026-08-26 11:54:05 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - Starting GenAiJavaSpringApplicationTests using Java 17.0.9 with PID 25292 (started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 11:54:05 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 11:54:08 [main] WARN  traceId= spanId= o.s.w.c.s.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'googleVertexAIController' defined in file [D:\workspace\gen-ai-java-spring\target\classes\com\genai\java\spring\chat\googlevertexai\GoogleVertexAIController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected single matching bean but found 3: openAIChatClient,vertexAIChatClient,huggingFaceChatClient
+2026-08-26 11:54:08 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-26 11:54:08 [main] ERROR traceId= spanId= o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.genai.java.spring.chat.googlevertexai.GoogleVertexAIController required a single bean, but 3 were found:
+	- openAIChatClient: defined by method 'openAIChatClient' in class path resource [com/genai/java/spring/config/AIProviderConfig.class]
+	- vertexAIChatClient: defined by method 'vertexAIChatClient' in class path resource [com/genai/java/spring/config/AIProviderConfig.class]
+	- huggingFaceChatClient: defined by method 'huggingFaceChatClient' in class path resource [com/genai/java/spring/config/AIProviderConfig.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes#parameter-name-retention)
+
+
+2026-08-26 11:54:08 [main] WARN  traceId= spanId= o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.genai.java.spring.GenAiJavaSpringApplicationTests@4fc165f6]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@996a546 testClass = com.genai.java.spring.GenAiJavaSpringApplicationTests, locations = [], classes = [com.genai.java.spring.GenAiJavaSpringApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5e17553a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@27912e3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7bf3a5d8, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@5e21e98f, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@2cb2fc20, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@5f0fd5a0, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@2fba3fc4, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@20dbc40f], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'googleVertexAIController' defined in file [D:\workspace\gen-ai-java-spring\target\classes\com\genai\java\spring\chat\googlevertexai\GoogleVertexAIController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected single matching bean but found 3: openAIChatClient,vertexAIChatClient,huggingFaceChatClient
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 80 common frames omitted
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected single matching bean but found 3: openAIChatClient,vertexAIChatClient,huggingFaceChatClient
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveNotUnique(DependencyDescriptor.java:218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1747)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 106 common frames omitted
+2026-08-26 11:56:13 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-26 11:56:13 [tomcat-shutdown] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-26 11:56:22 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 20348 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 11:56:22 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1781 ms
+2026-08-26 11:56:24 [main] WARN  traceId= spanId= o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'googleVertexAIController' defined in file [D:\workspace\gen-ai-java-spring\target\classes\com\genai\java\spring\chat\googlevertexai\GoogleVertexAIController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected single matching bean but found 3: openAIChatClient,vertexAIChatClient,huggingFaceChatClient
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-26 11:56:24 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-26 11:56:24 [main] ERROR traceId= spanId= o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.genai.java.spring.chat.googlevertexai.GoogleVertexAIController required a single bean, but 3 were found:
+	- openAIChatClient: defined by method 'openAIChatClient' in class path resource [com/genai/java/spring/config/AIProviderConfig.class]
+	- vertexAIChatClient: defined by method 'vertexAIChatClient' in class path resource [com/genai/java/spring/config/AIProviderConfig.class]
+	- huggingFaceChatClient: defined by method 'huggingFaceChatClient' in class path resource [com/genai/java/spring/config/AIProviderConfig.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes#parameter-name-retention)
+
+
+2026-08-26 12:01:01 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 25376 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 12:01:01 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1555 ms
+2026-08-26 12:01:02 [main] WARN  traceId= spanId= o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'googleVertexAIController' defined in file [D:\workspace\gen-ai-java-spring\target\classes\com\genai\java\spring\chat\googlevertexai\GoogleVertexAIController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("googleVertexAIChatClient")}
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-26 12:01:02 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-26 12:01:03 [main] ERROR traceId= spanId= o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'googleVertexAIController' defined in file [D:\workspace\gen-ai-java-spring\target\classes\com\genai\java\spring\chat\googlevertexai\GoogleVertexAIController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("googleVertexAIChatClient")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.genai.java.spring.GenAiJavaSpringApplication.main(GenAiJavaSpringApplication.java:10)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("googleVertexAIChatClient")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2315)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1733)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+2026-08-26 12:02:39 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 15036 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 12:02:39 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 12:02:41 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 12:02:41 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 12:02:41 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 12:02:41 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 12:02:41 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 12:02:41 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1693 ms
+2026-08-26 12:02:43 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 12:02:43 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 12:02:43 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 4.232 seconds (process running for 5.05)
+2026-08-26 12:22:04 [http-nio-8081-exec-2] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-26 12:22:04 [http-nio-8081-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-26 12:22:04 [http-nio-8081-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-26 12:24:41 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-26 12:24:41 [tomcat-shutdown] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-26 12:24:47 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 7152 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 12:24:47 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 12:24:49 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 12:24:49 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 12:24:49 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 12:24:49 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 12:24:49 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 12:24:49 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1594 ms
+2026-08-26 12:24:50 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 12:24:50 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 12:24:50 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 4.09 seconds (process running for 5.0)
+2026-08-26 12:24:54 [http-nio-8081-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-26 12:24:54 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-26 12:24:54 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-26 12:24:58 [http-nio-8081-exec-1] INFO  traceId= spanId= c.g.j.s.c.h.HuggingFaceController - Generated code for message: ChatResponse [metadata={ id: chatcmpl-1d9925c7-c79f-4268-b746-cea0519009b9, usage: DefaultUsage{promptTokens=165, completionTokens=478, totalTokens=643}, rateLimit: { @type: org.springframework.ai.openai.metadata.OpenAiRateLimit, requestsLimit: null, requestsRemaining: null, requestsReset: null, tokensLimit: null; tokensRemaining: null; tokensReset: null } }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=```java
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * This class provides an efficient solution for finding an item in a list with an average time complexity of O(1).
+ */
+public class ItemFinder {
+
+    /**
+     * Finds the index of the first occurrence of the specified item in the list.
+     *
+     * @param items the list of items to search through
+     * @param item the item to find
+     * @return the index of the first occurrence of the item if found, otherwise -1
+     */
+    public static int solve(List<String> items, String item) {
+        Map<String, Integer> itemIndexMap = new HashMap<>();
+        for (int i = 0; i < items.size(); i++) {
+            if (!itemIndexMap.containsKey(items.get(i))) {
+                itemIndexMap.put(items.get(i), i);
+            }
+        }
+        return itemIndexMap.getOrDefault(item, -1);
+    }
+
+    public static void main(String[] args) {
+        List<String> items = List.of("apple", "banana", "cherry", "date");
+        String targetItem = "cherry";
+
+        int result = solve(items, targetItem);
+        System.out.println("Index of '" + targetItem + "' in the list: " + result); // Output should be 2
+
+        // Test case with an item not in the list
+        String missingItem = "grape";
+        int missingResult = solve(items, missingItem);
+        System.out.println("Index of '" + missingItem + "' in the list: " + missingResult); // Output should be -1
+    }
+}
+```
+
+This implementation uses a `HashMap` to store each item from the list and its corresponding index as the key-value pair. The `solve()` method iterates over the list once and adds each item and its index to the map. If the item is already present in the map, it won't overwrite the existing index, which ensures that we get the index of the first occurrence of the item.
+
+The `main()` method includes sample input and output to demonstrate the functionality of the `solve()` method. This version of the algorithm has an average time complexity of O(1) for lookup operations because hash maps provide constant-time performance for lookups (assuming no collisions)., metadata={role=ASSISTANT, messageType=ASSISTANT, refusal=, finishReason=STOP, annotations=[{}], index=0, id=chatcmpl-1d9925c7-c79f-4268-b746-cea0519009b9}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='STOP', filters=0, metadata=0]]]]
+2026-08-26 12:26:01 [http-nio-8081-exec-4] INFO  traceId= spanId= c.g.j.s.c.h.HuggingFaceController - Generated code for message: ChatResponse [metadata={ id: chatcmpl-307e7c5a-5b04-433f-8942-ac2fb40246f7, usage: DefaultUsage{promptTokens=169, completionTokens=453, totalTokens=622}, rateLimit: { @type: org.springframework.ai.openai.metadata.OpenAiRateLimit, requestsLimit: null, requestsRemaining: null, requestsReset: null, tokensLimit: null; tokensRemaining: null; tokensReset: null } }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=```java
+import java.util.HashMap;
+import java.util.List;
+
+public class ItemLookup {
+
+    /**
+     * Solves the problem of finding an item in a list with O(1) lookup time by using a HashMap.
+     *
+     * @param items The list of items to search through.
+     * @return A HashMap where keys are the items and values are their indices in the original list.
+     */
+    public static <T> HashMap<T, Integer> solve(List<T> items) {
+        HashMap<T, Integer> lookup = new HashMap<>();
+        for (int i = 0; i < items.size(); i++) {
+            lookup.put(items.get(i), i);
+        }
+        return lookup;
+    }
+
+    public static void main(String[] args) {
+        List<String> items = List.of("apple", "banana", "cherry");
+        HashMap<String, Integer> lookup = solve(items);
+        
+        System.out.println("Lookup table: " + lookup);
+        // Output: Lookup table: {apple=0, banana=1, cherry=2}
+        
+        String targetItem = "banana";
+        if (lookup.containsKey(targetItem)) {
+            int index = lookup.get(targetItem);
+            System.out.println("Found '" + targetItem + "' at index: " + index);
+            // Output: Found 'banana' at index: 1
+        } else {
+            System.out.println("'" + targetItem + "' not found.");
+        }
+    }
+}
+```
+
+### Explication:
+La méthode `solve` prend une liste de tout type d'éléments et construit un `HashMap` où les clés sont les éléments de la liste et les valeurs sont leurs indices respectifs. Cela permet un accès en temps constant (`O(1)`) aux éléments.
+
+Le `main` fournit un exemple simple pour illustrer l'utilisation de cette méthode. Il crée une liste d'éléments, construit le tableau de lookup et recherche un élément spécifique dans la liste. 
+
+Cette approche est efficace car elle utilise une structure de données qui offre des performances optimales pour les recherches, même si elle nécessite plus de mémoire en raison de la création du `HashMap`., metadata={role=ASSISTANT, messageType=ASSISTANT, refusal=, finishReason=STOP, annotations=[{}], index=0, id=chatcmpl-307e7c5a-5b04-433f-8942-ac2fb40246f7}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='STOP', filters=0, metadata=0]]]]
+2026-08-26 12:26:38 [http-nio-8081-exec-6] INFO  traceId= spanId= c.g.j.s.c.h.HuggingFaceController - Generated code for message: ChatResponse [metadata={ id: chatcmpl-0b9467f7-0251-469b-8f13-ca196da5be9a, usage: DefaultUsage{promptTokens=168, completionTokens=857, totalTokens=1025}, rateLimit: { @type: org.springframework.ai.openai.metadata.OpenAiRateLimit, requestsLimit: null, requestsRemaining: null, requestsReset: null, tokensLimit: null; tokensRemaining: null; tokensReset: null } }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=Here's how you can achieve this by creating a custom `ItemMap` class that uses a `HashMap` for quick lookups while maintaining an order for iteration:
+
+```java
+import java.util.*;
+
+/**
+ * Classe pour gérer une liste d'éléments avec un accès O(1) aux éléments par leur valeur.
+ */
+public class ItemMap<K, V> {
+    private final Map<K, V> map = new HashMap<>();
+    private final List<V> list = new ArrayList<>();
+
+    /**
+     * Ajoute un élément à la collection.
+     *
+     * @param key   La clé de l'élément à ajouter.
+     * @param value La valeur de l'élément à ajouter.
+     */
+    public void add(K key, V value) {
+        if (map.containsKey(key)) {
+            remove(key);
+        }
+        map.put(key, value);
+        list.add(value);
+    }
+
+    /**
+     * Supprime un élément de la collection.
+     *
+     * @param key La clé de l'élément à supprimer.
+     */
+    public void remove(K key) {
+        V value = map.remove(key);
+        if (value != null) {
+            list.remove(value);
+        }
+    }
+
+    /**
+     * Retourne le nombre d'éléments dans la collection.
+     *
+     * @return Le nombre d'éléments.
+     */
+    public int size() {
+        return list.size();
+    }
+
+    /**
+     * Recherche un élément par sa clé et renvoie sa valeur si elle est trouvée.
+     *
+     * @param key La clé de l'élément à rechercher.
+     * @return La valeur de l'élément correspondant à la clé, ou null si l'élément n'est pas trouvé.
+     */
+    public V get(K key) {
+        return map.get(key);
+    }
+
+    /**
+     * Itère sur les éléments dans l'ordre d'ajout et appelle la fonction passée pour chaque élément.
+     *
+     * @param action L'action à exécuter pour chaque élément.
+     */
+    public void forEach(java.util.function.Consumer<? super V> action) {
+        list.forEach(action);
+    }
+
+    /**
+     * Exemple d'utilisation du ItemMap.
+     *
+     * @param args Arguments de ligne de commande.
+     */
+    public static void main(String[] args) {
+        ItemMap<String, Integer> itemMap = new ItemMap<>();
+        
+        // Ajout d'éléments
+        itemMap.add("one", 1);
+        itemMap.add("two", 2);
+        itemMap.add("three", 3);
+
+        // Affichage des valeurs en ordre d'ajout
+        System.out.println("Valeurs en ordre d'ajout:");
+        itemMap.forEach(System.out::println);
+
+        // Récupération d'une valeur par clé
+        Integer value = itemMap.get("two");
+        System.out.println("\nValeur associée à 'two': " + value);
+
+        // Suppression d'un élément
+        itemMap.remove("three");
+
+        // Nouvel affichage après suppression
+        System.out.println("\nValeurs après suppression de 'three':");
+        itemMap.forEach(System.out::println);
+    }
+}
+```
+
+### Explications :
+- **HashMap** : Utilisée pour obtenir la valeur associée à une clé en temps constant \(O(1)\).
+- **ArrayList** : Utilisé pour maintenir la liste des éléments dans l'ordre dans lequel ils ont été ajoutés.
+
+La classe `ItemMap` fournit des méthodes pour ajouter (`add`) et supprimer (`remove`) des éléments, ainsi que pour récupérer leur taille (`size`) et obtenir une valeur par sa clé (`get`). Elle utilise également une méthode `forEach` qui itère sur les éléments de manière linéaire \(O(n)\), mais permet une utilisation plus flexible des Java Streams si nécessaire. 
+
+Le `main()` inclus montre comment utiliser cette classe avec quelques exemples simples., metadata={role=ASSISTANT, messageType=ASSISTANT, refusal=, finishReason=STOP, annotations=[{}], index=0, id=chatcmpl-0b9467f7-0251-469b-8f13-ca196da5be9a}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='STOP', filters=0, metadata=0]]]]
+2026-08-26 12:27:35 [http-nio-8081-exec-7] INFO  traceId= spanId= c.g.j.s.c.h.HuggingFaceController - Generated code for message: ChatResponse [metadata={ id: chatcmpl-45b7e76f-0009-427e-83f1-31f9d91c4c77, usage: DefaultUsage{promptTokens=168, completionTokens=564, totalTokens=732}, rateLimit: { @type: org.springframework.ai.openai.metadata.OpenAiRateLimit, requestsLimit: null, requestsRemaining: null, requestsReset: null, tokensLimit: null; tokensRemaining: null; tokensReset: null } }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=```java
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Cette classe fournit une méthode pour trouver un élément dans une liste en O(1).
+ * Elle utilise une Map pour stocker les éléments et leur index, ce qui permet un accès rapide.
+ */
+public class ItemFinder {
+
+    /**
+     * Trouve l'index d'un élément spécifique dans la liste.
+     *
+     * @param items La liste d'éléments à parcourir
+     * @param target L'élément dont on veut trouver l'index
+     * @return L'index de l'élément si trouvé, sinon -1
+     */
+    public static int solve(List<String> items, String target) {
+        // Créer une map pour stocker l'élément et son index
+        Map<String, Integer> itemIndexMap = new HashMap<>();
+
+        // Parcourir la liste et ajouter chaque élément avec son index à la map
+        for (int i = 0; i < items.size(); i++) {
+            itemIndexMap.put(items.get(i), i);
+        }
+
+        // Vérifier si l'élément cible est présent dans la map
+        return itemIndexMap.getOrDefault(target, -1);
+    }
+
+    /**
+     * Méthode principale pour tester le solve()
+     */
+    public static void main(String[] args) {
+        List<String> items = List.of("apple", "banana", "cherry", "date");
+        String target = "cherry";
+
+        // Appeler la méthode solve() et afficher le résultat
+        int result = solve(items, target);
+
+        System.out.println("L'élément '" + target + "' est à l'index : " + result);
+    }
+}
+```
+
+Ce code implémente une classe `ItemFinder` avec une méthode statique `solve()` qui prend une liste d'éléments et un élément cible en entrée et retourne l'index de l'élément cible si il est trouvé dans la liste ; sinon, il renvoie -1.
+
+La méthode `solve()` utilise une `HashMap` pour stocker chaque élément de la liste ainsi que son index correspondant. Cela permet un temps constant O(1) pour la recherche des éléments, car la `HashMap` utilise des tableaux hashés interne pour organiser les données et accélérer la recherche.
+
+Le code est structuré de manière idiomatique et efficace, en utilisant les meilleures pratiques de codage en Java 17. Il comprend également un exemple simple dans la méthode `main()` pour démontrer comment utiliser la méthode `solve()`., metadata={role=ASSISTANT, messageType=ASSISTANT, refusal=, finishReason=STOP, annotations=[{}], index=0, id=chatcmpl-45b7e76f-0009-427e-83f1-31f9d91c4c77}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='STOP', filters=0, metadata=0]]]]
+2026-08-26 13:02:43 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-26 13:02:44 [tomcat-shutdown] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-26 13:02:46 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 24364 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 13:02:46 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 13:02:47 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 13:02:47 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 13:02:47 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 13:02:47 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 13:02:47 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 13:02:47 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1073 ms
+2026-08-26 13:02:48 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 13:02:48 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 13:02:48 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 2.9 seconds (process running for 3.61)
+2026-08-26 14:53:18 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-26 14:53:19 [tomcat-shutdown] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-26 14:53:28 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 3512 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 14:53:28 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 14:53:30 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 14:53:30 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 14:53:30 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 14:53:30 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 14:53:30 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 14:53:30 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1602 ms
+2026-08-26 14:53:31 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 14:53:31 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 14:53:31 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 4.078 seconds (process running for 4.905)
+2026-08-26 14:54:48 [http-nio-8081-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-26 14:54:48 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-26 14:54:48 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-26 14:54:48 [http-nio-8081-exec-1] ERROR traceId= spanId= o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: URI must not be null] with root cause
+java.lang.IllegalArgumentException: URI must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:181)
+	at org.springframework.web.util.UriComponentsBuilder.fromUriString(UriComponentsBuilder.java:182)
+	at org.springframework.web.util.UriComponentsBuilder.fromHttpUrl(UriComponentsBuilder.java:243)
+	at org.springframework.ai.huggingface.invoker.ApiClient.invokeAPI(ApiClient.java:479)
+	at org.springframework.ai.huggingface.api.TextGenerationInferenceApi.compatGenerateWithHttpInfo(TextGenerationInferenceApi.java:106)
+	at org.springframework.ai.huggingface.api.TextGenerationInferenceApi.compatGenerate(TextGenerationInferenceApi.java:67)
+	at org.springframework.ai.huggingface.HuggingfaceChatModel.call(HuggingfaceChatModel.java:98)
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:114)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:113)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:521)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:519)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:498)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.chatClientResponse(DefaultChatClient.java:481)
+	at com.genai.java.spring.chat.huggingface.HuggingFaceController.generateCode(HuggingFaceController.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-08-26 14:54:57 [http-nio-8081-exec-5] ERROR traceId= spanId= o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: URI must not be null] with root cause
+java.lang.IllegalArgumentException: URI must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:181)
+	at org.springframework.web.util.UriComponentsBuilder.fromUriString(UriComponentsBuilder.java:182)
+	at org.springframework.web.util.UriComponentsBuilder.fromHttpUrl(UriComponentsBuilder.java:243)
+	at org.springframework.ai.huggingface.invoker.ApiClient.invokeAPI(ApiClient.java:479)
+	at org.springframework.ai.huggingface.api.TextGenerationInferenceApi.compatGenerateWithHttpInfo(TextGenerationInferenceApi.java:106)
+	at org.springframework.ai.huggingface.api.TextGenerationInferenceApi.compatGenerate(TextGenerationInferenceApi.java:67)
+	at org.springframework.ai.huggingface.HuggingfaceChatModel.call(HuggingfaceChatModel.java:98)
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:114)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:113)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:521)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:519)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:498)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.chatClientResponse(DefaultChatClient.java:481)
+	at com.genai.java.spring.chat.huggingface.HuggingFaceController.generateCode(HuggingFaceController.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-08-26 14:56:01 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-26 14:56:01 [tomcat-shutdown] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-26 14:56:37 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 7136 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 14:56:37 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 14:56:39 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 14:56:39 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 14:56:39 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 14:56:39 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 14:56:39 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 14:56:39 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1627 ms
+2026-08-26 14:56:40 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 14:56:40 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 14:56:40 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 4.276 seconds (process running for 5.206)
+2026-08-26 14:56:48 [http-nio-8081-exec-2] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-26 14:56:48 [http-nio-8081-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-26 14:56:48 [http-nio-8081-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-26 14:56:48 [http-nio-8081-exec-2] ERROR traceId= spanId= o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: URI must not be null] with root cause
+java.lang.IllegalArgumentException: URI must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:181)
+	at org.springframework.web.util.UriComponentsBuilder.fromUriString(UriComponentsBuilder.java:182)
+	at org.springframework.web.util.UriComponentsBuilder.fromHttpUrl(UriComponentsBuilder.java:243)
+	at org.springframework.ai.huggingface.invoker.ApiClient.invokeAPI(ApiClient.java:479)
+	at org.springframework.ai.huggingface.api.TextGenerationInferenceApi.compatGenerateWithHttpInfo(TextGenerationInferenceApi.java:106)
+	at org.springframework.ai.huggingface.api.TextGenerationInferenceApi.compatGenerate(TextGenerationInferenceApi.java:67)
+	at org.springframework.ai.huggingface.HuggingfaceChatModel.call(HuggingfaceChatModel.java:98)
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:114)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:113)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:521)
+	at io.micrometer.observation.Observation.observe(Observation.java:564)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:519)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:498)
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.chatClientResponse(DefaultChatClient.java:481)
+	at com.genai.java.spring.chat.huggingface.HuggingFaceController.generateCode(HuggingFaceController.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-08-26 15:21:00 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-26 15:21:01 [tomcat-shutdown] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-26 15:22:05 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 5952 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 15:22:05 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 15:22:07 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 15:22:07 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 15:22:07 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 15:22:07 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 15:22:07 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 15:22:07 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2111 ms
+2026-08-26 15:22:08 [main] WARN  traceId= spanId= o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'huggingFaceController' defined in file [D:\workspace\gen-ai-java-spring\target\classes\com\genai\java\spring\chat\huggingface\HuggingFaceController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'huggingFaceChatClient' defined in class path resource [com/genai/java/spring/config/AIProviderConfig.class]: Unsatisfied dependency expressed through method 'huggingFaceChatClient' parameter 0: Error creating bean with name 'huggingfaceChatModel' defined in class path resource [com/genai/java/spring/config/AIProviderConfig.class]: Unexpected exception during bean creation
+2026-08-26 15:22:08 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-08-26 15:22:08 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-26 15:22:08 [main] ERROR traceId= spanId= o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'huggingFaceController' defined in file [D:\workspace\gen-ai-java-spring\target\classes\com\genai\java\spring\chat\huggingface\HuggingFaceController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'huggingFaceChatClient' defined in class path resource [com/genai/java/spring/config/AIProviderConfig.class]: Unsatisfied dependency expressed through method 'huggingFaceChatClient' parameter 0: Error creating bean with name 'huggingfaceChatModel' defined in class path resource [com/genai/java/spring/config/AIProviderConfig.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.genai.java.spring.GenAiJavaSpringApplication.main(GenAiJavaSpringApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'huggingFaceChatClient' defined in class path resource [com/genai/java/spring/config/AIProviderConfig.class]: Unsatisfied dependency expressed through method 'huggingFaceChatClient' parameter 0: Error creating bean with name 'huggingfaceChatModel' defined in class path resource [com/genai/java/spring/config/AIProviderConfig.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'huggingfaceChatModel' defined in class path resource [com/genai/java/spring/config/AIProviderConfig.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 34 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'spring.ai.huggingface.base-url' in value "${spring.ai.huggingface.base-url}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:298)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:131)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:293)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:264)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:186)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:970)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1675)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	... 42 common frames omitted
+2026-08-26 15:24:35 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 9768 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 15:24:35 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 15:24:37 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 15:24:37 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 15:24:37 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 15:24:37 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 15:24:37 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 15:24:37 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2098 ms
+2026-08-26 15:24:39 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 15:24:39 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 15:24:39 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 5.43 seconds (process running for 6.456)
+2026-08-26 15:25:00 [http-nio-8081-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-26 15:25:00 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-26 15:25:00 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-08-26 15:25:08 [http-nio-8081-exec-1] INFO  traceId= spanId= c.g.j.s.c.h.HuggingFaceController - Generated code for message: ChatResponse [metadata={ id: , usage: org.springframework.ai.chat.metadata.EmptyUsage@3af7b6e4, rateLimit: org.springframework.ai.chat.metadata.EmptyRateLimit@149fa935 }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=       Algorithm:
+       - Create a HashMap to store the items and their indices
+       - Iterate over the list and populate the HashMap
+       - Return the HashMap
+```java
+```java
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Classe pour résoudre le problème de recherche d'éléments en O(1) en utilisant une HashMap.
+ */
+public class ElementFinder {
+
+    /**
+     * Méthode pour créer une HashMap avec les éléments et leurs indices.
+     *
+     * @param items la liste d'éléments à traiter
+     * @return une HashMap avec les éléments comme clés et leurs indices comme valeurs
+     */
+    public static Map<Object, Integer> solve(List<Object> items) {
+        Map<Object, Integer> itemIndexMap = new HashMap<>();
+        for (int i = 0; i < items.size(); i++) {
+            itemIndexMap.put(items.get(i), i);
+        }
+        return itemIndexMap;
+    }
+
+    /**
+     * Méthode principale pour tester la classe.
+     *
+     * @param args les arguments de la ligne de commande (non utilisés)
+     */
+    public static void main(String[] args) {
+        List<String> items = List.of("apple", "banana", "cherry");
+        Map<String, Integer> itemIndexMap = solve(items);
+        System.out.println("Item Index Map: " + itemIndexMap);
+    }
+}
+```, metadata={tokens=[{id=981, logprob=-0.5004883, special=false, text=      }, {id=40325, logprob=-1.6367188, special=false, text= Algorithm}, {id=2834, logprob=-0.70166016, special=false, text=:
+}, {id=981, logprob=-0.0463562, special=false, text=      }, {id=481, logprob=-0.38232422, special=false, text= -}, {id=4230, logprob=-0.9375, special=false, text= Create}, {id=264, logprob=-0.17041016, special=false, text= a}, {id=10528, logprob=-0.87060547, special=false, text= HashMap}, {id=311, logprob=-1.2470703, special=false, text= to}, {id=3553, logprob=-0.08068848, special=false, text= store}, {id=279, logprob=-0.7729492, special=false, text= the}, {id=3589, logprob=-0.47558594, special=false, text= items}, {id=323, logprob=-0.9267578, special=false, text= and}, {id=862, logprob=-0.005077362, special=false, text= their}, {id=14937, logprob=-0.18823242, special=false, text= indices}, {id=319, logprob=-0.7211914, special=false, text=
+}, {id=981, logprob=-0.0011024475, special=false, text=      }, {id=481, logprob=-0.0019464493, special=false, text= -}, {id=54340, logprob=-0.21496582, special=false, text= Iterate}, {id=916, logprob=-0.078552246, special=false, text= over}, {id=279, logprob=-0.0012588501, special=false, text= the}, {id=1140, logprob=-0.036376953, special=false, text= list}, {id=323, logprob=-0.5996094, special=false, text= and}, {id=30446, logprob=-0.49121094, special=false, text= populate}, {id=279, logprob=-0.0050354004, special=false, text= the}, {id=10528, logprob=-0.032073975, special=false, text= HashMap}, {id=319, logprob=-0.4963379, special=false, text=
+}, {id=981, logprob=-0.0026416779, special=false, text=      }, {id=481, logprob=-0.007293701, special=false, text= -}, {id=3411, logprob=-1.2099609, special=false, text= Return}, {id=279, logprob=-0.026260376, special=false, text= the}, {id=10528, logprob=-0.099243164, special=false, text= HashMap}, {id=319, logprob=-0.8222656, special=false, text=
+}, {id=73594, logprob=-0.37402344, special=false, text=```}, {id=10042, logprob=-0.004310608, special=false, text=java}, {id=198, logprob=-0.23168945, special=false, text=
+}, {id=73594, logprob=-0.018798828, special=false, text=```}, {id=10042, logprob=-4.968643E-4, special=false, text=java}, {id=198, logprob=-0.0036888123, special=false, text=
+}, {id=474, logprob=-0.021347046, special=false, text=import}, {id=1642, logprob=-2.849102E-5, special=false, text= java}, {id=1971, logprob=-1.16467476E-4, special=false, text=.util}, {id=20994, logprob=-0.014450073, special=false, text=.HashMap}, {id=280, logprob=-0.0010099411, special=false, text=;
+}, {id=474, logprob=-2.861023E-6, special=false, text=import}, {id=1642, logprob=-4.887581E-6, special=false, text= java}, {id=1971, logprob=-5.4836273E-6, special=false, text=.util}, {id=5814, logprob=-0.0035743713, special=false, text=.List}, {id=280, logprob=-0.66259766, special=false, text=;
+}, {id=474, logprob=-1.6093254E-5, special=false, text=import}, {id=1642, logprob=-2.8133392E-5, special=false, text= java}, {id=1971, logprob=-2.5510788E-5, special=false, text=.util}, {id=10104, logprob=-0.0010156631, special=false, text=.Map}, {id=401, logprob=-0.009506226, special=false, text=;
+
+}, {id=1747, logprob=-0.32250977, special=false, text=/**
+}, {id=353, logprob=-3.759861E-4, special=false, text= *}, {id=91887, logprob=-0.48657227, special=false, text= Classe}, {id=4914, logprob=-0.17443848, special=false, text= pour}, {id=30707, logprob=-0.67626953, special=false, text= rés}, {id=2950, logprob=-7.958412E-4, special=false, text=oud}, {id=265, logprob=-1.1920929E-6, special=false, text=re}, {id=512, logprob=-0.10235596, special=false, text= le}, {id=79159, logprob=-2.5200844E-4, special=false, text= problème}, {id=409, logprob=-0.50683594, special=false, text= de}, {id=37217, logprob=-0.115600586, special=false, text= recherche}, {id=294, logprob=-0.17102051, special=false, text= d}, {id=6, logprob=-0.3552246, special=false, text='}, {id=28882, logprob=-0.032318115, special=false, text=élé}, {id=1368, logprob=-0.17736816, special=false, text=ments}, {id=662, logprob=-0.9770508, special=false, text= en}, {id=506, logprob=-0.040405273, special=false, text= O}, {id=7, logprob=-0.0262146, special=false, text=(}, {id=16, logprob=-1.4424324E-5, special=false, text=1}, {id=8, logprob=-0.35888672, special=false, text=)}, {id=662, logprob=-0.59765625, special=false, text= en}, {id=41487, logprob=-0.007461548, special=false, text= utilis}, {id=517, logprob=-7.1525574E-6, special=false, text=ant}, {id=6185, logprob=-0.11608887, special=false, text= une}, {id=10528, logprob=-0.05340576, special=false, text= HashMap}, {id=624, logprob=-0.06750488, special=false, text=.
+}, {id=735, logprob=-0.08660889, special=false, text= */
+}, {id=888, logprob=-1.5628338E-4, special=false, text=public}, {id=536, logprob=-0.0069503784, special=false, text= class}, {id=8543, logprob=-0.52734375, special=false, text= Element}, {id=42300, logprob=-0.43945312, special=false, text=Finder}, {id=1476, logprob=-0.009307861, special=false, text= {
+
+}, {id=262, logprob=-1.3911724E-4, special=false, text=   }, {id=1554, logprob=-3.0636787E-5, special=false, text= /**
+}, {id=257, logprob=-8.940697E-6, special=false, text=    }, {id=353, logprob=-1.0371208E-5, special=false, text= *}, {id=42931, logprob=-1.125, special=false, text= Mé}, {id=339, logprob=-1.9431114E-5, special=false, text=th}, {id=534, logprob=-7.18832E-5, special=false, text=ode}, {id=4914, logprob=-0.23791504, special=false, text= pour}, {id=74731, logprob=-0.9370117, special=false, text= créer}, {id=6185, logprob=-0.11199951, special=false, text= une}, {id=10528, logprob=-0.13928223, special=false, text= HashMap}, {id=9753, logprob=-0.72265625, special=false, text= avec}, {id=3541, logprob=-0.019851685, special=false, text= les}, {id=141067, logprob=-0.01701355, special=false, text= éléments}, {id=1842, logprob=-0.42285156, special=false, text= et}, {id=42053, logprob=-0.056671143, special=false, text= leurs}, {id=14937, logprob=-0.048614502, special=false, text= indices}, {id=624, logprob=-0.17614746, special=false, text=.
+}, {id=257, logprob=-6.67572E-6, special=false, text=    }, {id=1213, logprob=-0.38183594, special=false, text= *
+}, {id=257, logprob=-7.1525574E-7, special=false, text=    }, {id=353, logprob=-8.34465E-7, special=false, text= *}, {id=569, logprob=-2.5391579E-5, special=false, text= @}, {id=903, logprob=-3.2186508E-6, special=false, text=param}, {id=3589, logprob=-0.013137817, special=false, text= items}, {id=1187, logprob=-0.46533203, special=false, text= la}, {id=32924, logprob=-1.7023087E-4, special=false, text= liste}, {id=294, logprob=-0.0032176971, special=false, text= d}, {id=6, logprob=-2.7179718E-5, special=false, text='}, {id=28882, logprob=-0.005874634, special=false, text=élé}, {id=1368, logprob=-1.5497208E-6, special=false, text=ments}, {id=3784, logprob=-0.06793213, special=false, text= à}, {id=17567, logprob=-0.35131836, special=false, text= trait}, {id=261, logprob=-4.7683716E-7, special=false, text=er}, {id=198, logprob=-0.034698486, special=false, text=
+}, {id=257, logprob=-1.1920929E-7, special=false, text=    }, {id=353, logprob=-1.0728836E-6, special=false, text= *}, {id=569, logprob=-1.1920929E-7, special=false, text= @}, {id=689, logprob=-0.5229492, special=false, text=return}, {id=6185, logprob=-0.56640625, special=false, text= une}, {id=10528, logprob=-0.010665894, special=false, text= HashMap}, {id=9753, logprob=-0.6245117, special=false, text= avec}, {id=3541, logprob=-8.840561E-4, special=false, text= les}, {id=141067, logprob=-3.1995773E-4, special=false, text= éléments}, {id=21572, logprob=-0.42016602, special=false, text= comme}, {id=1185, logprob=-0.026031494, special=false, text= cl}, {id=5397, logprob=-0.0051727295, special=false, text=és}, {id=1842, logprob=-1.1920929E-5, special=false, text= et}, {id=42053, logprob=-0.09136963, special=false, text= leurs}, {id=14937, logprob=-4.1127205E-4, special=false, text= indices}, {id=21572, logprob=-0.003780365, special=false, text= comme}, {id=95935, logprob=-3.3521652E-4, special=false, text= valeurs}, {id=198, logprob=-6.2823296E-5, special=false, text=
+}, {id=257, logprob=-3.695488E-6, special=false, text=    }, {id=735, logprob=-0.0030822754, special=false, text= */
+}, {id=262, logprob=-1.4305115E-6, special=false, text=   }, {id=584, logprob=-1.9931793E-4, special=false, text= public}, {id=1099, logprob=-2.3841858E-6, special=false, text= static}, {id=5027, logprob=-0.66552734, special=false, text= Map}, {id=20549, logprob=-0.09893799, special=false, text=<Object}, {id=11, logprob=-1.001358E-5, special=false, text=,}, {id=4440, logprob=-4.7326088E-5, special=false, text= Integer}, {id=29, logprob=-2.1457672E-6, special=false, text=>}, {id=11625, logprob=-0.024032593, special=false, text= solve}, {id=10278, logprob=-0.0010557175, special=false, text=(List}, {id=20549, logprob=-0.0072135925, special=false, text=<Object}, {id=29, logprob=-3.2186508E-6, special=false, text=>}, {id=3589, logprob=-1.66893E-6, special=false, text= items}, {id=8, logprob=-1.66893E-6, special=false, text=)}, {id=341, logprob=-6.0796738E-6, special=false, text= {
+}, {id=286, logprob=-1.2278557E-5, special=false, text=       }, {id=5027, logprob=-0.09814453, special=false, text= Map}, {id=20549, logprob=-1.1920929E-7, special=false, text=<Object}, {id=11, logprob=-9.536743E-7, special=false, text=,}, {id=4440, logprob=-1.5497208E-6, special=false, text= Integer}, {id=29, logprob=-2.3841858E-6, special=false, text=>}, {id=1509, logprob=-0.36279297, special=false, text= item}, {id=1552, logprob=-0.6738281, special=false, text=Index}, {id=2227, logprob=-1.1205673E-5, special=false, text=Map}, {id=284, logprob=-3.5762787E-7, special=false, text= =}, {id=501, logprob=-5.841255E-6, special=false, text= new}, {id=10528, logprob=-1.0609627E-5, special=false, text= HashMap}, {id=10874, logprob=-0.041748047, special=false, text=<>();
+}, {id=286, logprob=-0.011772156, special=false, text=       }, {id=369, logprob=-0.005844116, special=false, text= for}, {id=320, logprob=-8.106232E-6, special=false, text= (}, {id=396, logprob=-5.8174133E-5, special=false, text=int}, {id=600, logprob=-0.01184082, special=false, text= i}, {id=284, logprob=-4.7683716E-7, special=false, text= =}, {id=220, logprob=-2.026558E-6, special=false, text= }, {id=15, logprob=-1.1920929E-7, special=false, text=0}, {id=26, logprob=-2.1576881E-5, special=false, text=;}, {id=600, logprob=-8.34465E-7, special=false, text= i}, {id=366, logprob=-1.7881393E-6, special=false, text= <}, {id=3589, logprob=-1.4305115E-6, special=false, text= items}, {id=2486, logprob=-4.7683716E-7, special=false, text=.size}, {id=2129, logprob=-1.9073486E-6, special=false, text=();}, {id=600, logprob=-5.9080124E-4, special=false, text= i}, {id=2457, logprob=-4.7683716E-7, special=false, text=++)}, {id=341, logprob=-2.503395E-6, special=false, text= {
+}, {id=310, logprob=-1.41859055E-5, special=false, text=           }, {id=1509, logprob=-0.001499176, special=false, text= item}, {id=1552, logprob=-7.1525574E-7, special=false, text=Index}, {id=2227, logprob=-1.1920929E-7, special=false, text=Map}, {id=3597, logprob=-2.503395E-6, special=false, text=.put}, {id=24337, logprob=-4.887581E-6, special=false, text=(items}, {id=670, logprob=-4.7683716E-7, special=false, text=.get}, {id=1956, logprob=-1.0728836E-6, special=false, text=(i}, {id=701, logprob=-4.053116E-6, special=false, text=),}, {id=600, logprob=-5.9604645E-7, special=false, text= i}, {id=317, logprob=-2.0980835E-5, special=false, text=);
+}, {id=286, logprob=-4.053116E-6, special=false, text=       }, {id=456, logprob=-1.0251999E-5, special=false, text= }
+}, {id=286, logprob=-7.2717667E-6, special=false, text=       }, {id=470, logprob=-1.4305115E-6, special=false, text= return}, {id=1509, logprob=-2.2649765E-6, special=false, text= item}, {id=1552, logprob=-2.6226044E-6, special=false, text=Index}, {id=2227, logprob=-2.7418137E-6, special=false, text=Map}, {id=280, logprob=-1.5735626E-5, special=false, text=;
+}, {id=262, logprob=-1.66893E-6, special=false, text=   }, {id=555, logprob=-5.0115585E-4, special=false, text= }
+
+}, {id=262, logprob=-3.695488E-6, special=false, text=   }, {id=1554, logprob=-0.08935547, special=false, text= /**
+}, {id=257, logprob=-2.9802322E-6, special=false, text=    }, {id=353, logprob=-6.556511E-6, special=false, text= *}, {id=42931, logprob=-0.11254883, special=false, text= Mé}, {id=339, logprob=-5.2452087E-6, special=false, text=th}, {id=534, logprob=-1.7881393E-6, special=false, text=ode}, {id=7394, logprob=-0.03463745, special=false, text= princip}, {id=1574, logprob=-2.3841858E-7, special=false, text=ale}, {id=4914, logprob=-0.020568848, special=false, text= pour}, {id=37111, logprob=-0.044769287, special=false, text= tester}, {id=1187, logprob=-0.12017822, special=false, text= la}, {id=36317, logprob=-1.0166016, special=false, text= classe}, {id=624, logprob=-0.4489746, special=false, text=.
+}, {id=257, logprob=-3.0994415E-6, special=false, text=    }, {id=1213, logprob=-0.018600464, special=false, text= *
+}, {id=257, logprob=-4.7683716E-7, special=false, text=    }, {id=353, logprob=-8.821487E-6, special=false, text= *}, {id=569, logprob=-5.9604645E-7, special=false, text= @}, {id=903, logprob=-3.4570694E-6, special=false, text=param}, {id=2827, logprob=-4.053116E-6, special=false, text= args}, {id=3541, logprob=-0.6074219, special=false, text= les}, {id=5977, logprob=-0.0013771057, special=false, text= arguments}, {id=409, logprob=-0.0032138824, special=false, text= de}, {id=1187, logprob=-0.042236328, special=false, text= la}, {id=26814, logprob=-0.007396698, special=false, text= ligne}, {id=409, logprob=-1.0728836E-6, special=false, text= de}, {id=67751, logprob=-0.005760193, special=false, text= commande}, {id=320, logprob=-0.5830078, special=false, text= (}, {id=6280, logprob=-0.008804321, special=false, text=non}, {id=41487, logprob=-1.3315678E-4, special=false, text= utilis}, {id=5397, logprob=-2.706051E-4, special=false, text=és}, {id=340, logprob=-0.002954483, special=false, text=)
+}, {id=257, logprob=-2.026558E-6, special=false, text=    }, {id=735, logprob=-3.027916E-5, special=false, text= */
+}, {id=262, logprob=-4.7683716E-7, special=false, text=   }, {id=584, logprob=-4.529953E-6, special=false, text= public}, {id=1099, logprob=-2.3841858E-7, special=false, text= static}, {id=737, logprob=-1.1920929E-7, special=false, text= void}, {id=1887, logprob=-9.536743E-7, special=false, text= main}, {id=2242, logprob=-2.2649765E-6, special=false, text=(String}, {id=1294, logprob=-2.2649765E-6, special=false, text=[]}, {id=2827, logprob=-1.5497208E-6, special=false, text= args}, {id=8, logprob=-2.3841858E-7, special=false, text=)}, {id=341, logprob=-1.1920929E-6, special=false, text= {
+}, {id=286, logprob=-1.0728836E-6, special=false, text=       }, {id=1759, logprob=-0.0028495789, special=false, text= List}, {id=3464, logprob=-0.6977539, special=false, text=<String}, {id=29, logprob=-2.6226044E-6, special=false, text=>}, {id=3589, logprob=-0.01878357, special=false, text= items}, {id=284, logprob=-8.893013E-4, special=false, text= =}, {id=1759, logprob=-1.0383129E-4, special=false, text= List}, {id=10229, logprob=-1.1920929E-6, special=false, text=.of}, {id=445, logprob=-8.106232E-6, special=false, text=("}, {id=22377, logprob=-0.08673096, special=false, text=apple}, {id=497, logprob=-4.887581E-6, special=false, text=",}, {id=330, logprob=0.0, special=false, text= "}, {id=87747, logprob=-4.172325E-5, special=false, text=banana}, {id=497, logprob=-7.1525574E-6, special=false, text=",}, {id=330, logprob=-3.5762787E-7, special=false, text= "}, {id=331, logprob=-0.001748085, special=false, text=ch}, {id=5400, logprob=-7.748604E-6, special=false, text=erry}, {id=797, logprob=-0.31347656, special=false, text=");
+}, {id=286, logprob=-7.212162E-5, special=false, text=       }, {id=5027, logprob=-1.333952E-4, special=false, text= Map}, {id=3464, logprob=-0.0423584, special=false, text=<String}, {id=11, logprob=-7.1525574E-7, special=false, text=,}, {id=4440, logprob=-3.5762787E-7, special=false, text= Integer}, {id=29, logprob=-9.536743E-7, special=false, text=>}, {id=1509, logprob=-0.8989258, special=false, text= item}, {id=1552, logprob=-0.05984497, special=false, text=Index}, {id=2227, logprob=-2.2244453E-4, special=false, text=Map}, {id=284, logprob=0.0, special=false, text= =}, {id=11625, logprob=-0.0019683838, special=false, text= solve}, {id=24337, logprob=-1.5735626E-5, special=false, text=(items}, {id=317, logprob=-0.123291016, special=false, text=);
+}, {id=286, logprob=-0.21020508, special=false, text=       }, {id=739, logprob=-0.008926392, special=false, text= System}, {id=2532, logprob=-7.1525574E-6, special=false, text=.out}, {id=2913, logprob=-4.339218E-5, special=false, text=.println}, {id=445, logprob=-0.27392578, special=false, text=("}, {id=1234, logprob=-1.2705078, special=false, text=Item}, {id=8008, logprob=-0.5239258, special=false, text= Index}, {id=5027, logprob=-0.0019292831, special=false, text= Map}, {id=25, logprob=-0.0013074875, special=false, text=:}, {id=330, logprob=-1.8119812E-5, special=false, text= "}, {id=488, logprob=-1.7881393E-6, special=false, text= +}, {id=1509, logprob=-1.1920929E-6, special=false, text= item}, {id=1552, logprob=-5.4836273E-6, special=false, text=Index}, {id=2227, logprob=-1.3113022E-6, special=false, text=Map}, {id=317, logprob=-0.15808105, special=false, text=);
+}, {id=262, logprob=-0.5654297, special=false, text=   }, {id=456, logprob=-1.5223026E-4, special=false, text= }
+}, {id=532, logprob=-2.4294853E-4, special=false, text=}
+}, {id=73594, logprob=-0.35766602, special=false, text=```}, {id=151645, logprob=-0.020202637, special=true, text=<|im_end|>}], finish_reason=eos_token, messageType=ASSISTANT, generated_tokens=303, prefill=[]}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]]
+2026-08-26 15:26:59 [http-nio-8081-exec-5] INFO  traceId= spanId= c.g.j.s.c.h.HuggingFaceController - Generated code for message: ChatResponse [metadata={ id: , usage: org.springframework.ai.chat.metadata.EmptyUsage@39882d24, rateLimit: org.springframework.ai.chat.metadata.EmptyRateLimit@60a7b6c5 }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=       Algorithm:
+       - Create a HashMap to store the items and their indices
+       - Iterate over the list and populate the HashMap
+       - Return the HashMap
+```java
+```java
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Classe pour résoudre le problème de recherche d'éléments en O(1) en utilisant une HashMap.
+ */
+public class ElementFinder {
+
+    /**
+     * Méthode pour créer une HashMap avec les éléments et leurs indices.
+     *
+     * @param items la liste d'éléments à traiter
+     * @return une HashMap avec les éléments comme clés et leurs indices comme valeurs
+     */
+    public static Map<Object, Integer> solve(List<Object> items) {
+        Map<Object, Integer> itemIndexMap = new HashMap<>();
+        for (int i = 0; i < items.size(); i++) {
+            itemIndexMap.put(items.get(i), i);
+        }
+        return itemIndexMap;
+    }
+
+    /**
+     * Méthode principale pour tester la classe.
+     *
+     * @param args les arguments de la ligne de commande (non utilisés)
+     */
+    public static void main(String[] args) {
+        List<String> items = List.of("apple", "banana", "cherry");
+        Map<String, Integer> itemIndexMap = solve(items);
+        System.out.println("Item Index Map: " + itemIndexMap);
+    }
+}
+```, metadata={tokens=[{id=981, logprob=-0.5004883, special=false, text=      }, {id=40325, logprob=-1.6367188, special=false, text= Algorithm}, {id=2834, logprob=-0.70166016, special=false, text=:
+}, {id=981, logprob=-0.0463562, special=false, text=      }, {id=481, logprob=-0.38232422, special=false, text= -}, {id=4230, logprob=-0.9375, special=false, text= Create}, {id=264, logprob=-0.17041016, special=false, text= a}, {id=10528, logprob=-0.87060547, special=false, text= HashMap}, {id=311, logprob=-1.2470703, special=false, text= to}, {id=3553, logprob=-0.08068848, special=false, text= store}, {id=279, logprob=-0.7729492, special=false, text= the}, {id=3589, logprob=-0.47558594, special=false, text= items}, {id=323, logprob=-0.9267578, special=false, text= and}, {id=862, logprob=-0.005077362, special=false, text= their}, {id=14937, logprob=-0.18823242, special=false, text= indices}, {id=319, logprob=-0.7211914, special=false, text=
+}, {id=981, logprob=-0.0011024475, special=false, text=      }, {id=481, logprob=-0.0019464493, special=false, text= -}, {id=54340, logprob=-0.21496582, special=false, text= Iterate}, {id=916, logprob=-0.078552246, special=false, text= over}, {id=279, logprob=-0.0012588501, special=false, text= the}, {id=1140, logprob=-0.036376953, special=false, text= list}, {id=323, logprob=-0.5996094, special=false, text= and}, {id=30446, logprob=-0.49121094, special=false, text= populate}, {id=279, logprob=-0.0050354004, special=false, text= the}, {id=10528, logprob=-0.032073975, special=false, text= HashMap}, {id=319, logprob=-0.4963379, special=false, text=
+}, {id=981, logprob=-0.0026416779, special=false, text=      }, {id=481, logprob=-0.007293701, special=false, text= -}, {id=3411, logprob=-1.2099609, special=false, text= Return}, {id=279, logprob=-0.026260376, special=false, text= the}, {id=10528, logprob=-0.099243164, special=false, text= HashMap}, {id=319, logprob=-0.8222656, special=false, text=
+}, {id=73594, logprob=-0.37402344, special=false, text=```}, {id=10042, logprob=-0.004310608, special=false, text=java}, {id=198, logprob=-0.23168945, special=false, text=
+}, {id=73594, logprob=-0.018798828, special=false, text=```}, {id=10042, logprob=-4.968643E-4, special=false, text=java}, {id=198, logprob=-0.0036888123, special=false, text=
+}, {id=474, logprob=-0.021347046, special=false, text=import}, {id=1642, logprob=-2.849102E-5, special=false, text= java}, {id=1971, logprob=-1.16467476E-4, special=false, text=.util}, {id=20994, logprob=-0.014450073, special=false, text=.HashMap}, {id=280, logprob=-0.0010099411, special=false, text=;
+}, {id=474, logprob=-2.861023E-6, special=false, text=import}, {id=1642, logprob=-4.887581E-6, special=false, text= java}, {id=1971, logprob=-5.4836273E-6, special=false, text=.util}, {id=5814, logprob=-0.0035743713, special=false, text=.List}, {id=280, logprob=-0.66259766, special=false, text=;
+}, {id=474, logprob=-1.6093254E-5, special=false, text=import}, {id=1642, logprob=-2.8133392E-5, special=false, text= java}, {id=1971, logprob=-2.5510788E-5, special=false, text=.util}, {id=10104, logprob=-0.0010156631, special=false, text=.Map}, {id=401, logprob=-0.009506226, special=false, text=;
+
+}, {id=1747, logprob=-0.32250977, special=false, text=/**
+}, {id=353, logprob=-3.759861E-4, special=false, text= *}, {id=91887, logprob=-0.48657227, special=false, text= Classe}, {id=4914, logprob=-0.17443848, special=false, text= pour}, {id=30707, logprob=-0.67626953, special=false, text= rés}, {id=2950, logprob=-7.958412E-4, special=false, text=oud}, {id=265, logprob=-1.1920929E-6, special=false, text=re}, {id=512, logprob=-0.10235596, special=false, text= le}, {id=79159, logprob=-2.5200844E-4, special=false, text= problème}, {id=409, logprob=-0.50683594, special=false, text= de}, {id=37217, logprob=-0.115600586, special=false, text= recherche}, {id=294, logprob=-0.17102051, special=false, text= d}, {id=6, logprob=-0.3552246, special=false, text='}, {id=28882, logprob=-0.032318115, special=false, text=élé}, {id=1368, logprob=-0.17736816, special=false, text=ments}, {id=662, logprob=-0.9770508, special=false, text= en}, {id=506, logprob=-0.040405273, special=false, text= O}, {id=7, logprob=-0.0262146, special=false, text=(}, {id=16, logprob=-1.4424324E-5, special=false, text=1}, {id=8, logprob=-0.35888672, special=false, text=)}, {id=662, logprob=-0.59765625, special=false, text= en}, {id=41487, logprob=-0.007461548, special=false, text= utilis}, {id=517, logprob=-7.1525574E-6, special=false, text=ant}, {id=6185, logprob=-0.11608887, special=false, text= une}, {id=10528, logprob=-0.05340576, special=false, text= HashMap}, {id=624, logprob=-0.06750488, special=false, text=.
+}, {id=735, logprob=-0.08660889, special=false, text= */
+}, {id=888, logprob=-1.5628338E-4, special=false, text=public}, {id=536, logprob=-0.0069503784, special=false, text= class}, {id=8543, logprob=-0.52734375, special=false, text= Element}, {id=42300, logprob=-0.43945312, special=false, text=Finder}, {id=1476, logprob=-0.009307861, special=false, text= {
+
+}, {id=262, logprob=-1.3911724E-4, special=false, text=   }, {id=1554, logprob=-3.0636787E-5, special=false, text= /**
+}, {id=257, logprob=-8.940697E-6, special=false, text=    }, {id=353, logprob=-1.0371208E-5, special=false, text= *}, {id=42931, logprob=-1.125, special=false, text= Mé}, {id=339, logprob=-1.9431114E-5, special=false, text=th}, {id=534, logprob=-7.18832E-5, special=false, text=ode}, {id=4914, logprob=-0.23791504, special=false, text= pour}, {id=74731, logprob=-0.9370117, special=false, text= créer}, {id=6185, logprob=-0.11199951, special=false, text= une}, {id=10528, logprob=-0.13928223, special=false, text= HashMap}, {id=9753, logprob=-0.72265625, special=false, text= avec}, {id=3541, logprob=-0.019851685, special=false, text= les}, {id=141067, logprob=-0.01701355, special=false, text= éléments}, {id=1842, logprob=-0.42285156, special=false, text= et}, {id=42053, logprob=-0.056671143, special=false, text= leurs}, {id=14937, logprob=-0.048614502, special=false, text= indices}, {id=624, logprob=-0.17614746, special=false, text=.
+}, {id=257, logprob=-6.67572E-6, special=false, text=    }, {id=1213, logprob=-0.38183594, special=false, text= *
+}, {id=257, logprob=-7.1525574E-7, special=false, text=    }, {id=353, logprob=-8.34465E-7, special=false, text= *}, {id=569, logprob=-2.5391579E-5, special=false, text= @}, {id=903, logprob=-3.2186508E-6, special=false, text=param}, {id=3589, logprob=-0.013137817, special=false, text= items}, {id=1187, logprob=-0.46533203, special=false, text= la}, {id=32924, logprob=-1.7023087E-4, special=false, text= liste}, {id=294, logprob=-0.0032176971, special=false, text= d}, {id=6, logprob=-2.7179718E-5, special=false, text='}, {id=28882, logprob=-0.005874634, special=false, text=élé}, {id=1368, logprob=-1.5497208E-6, special=false, text=ments}, {id=3784, logprob=-0.06793213, special=false, text= à}, {id=17567, logprob=-0.35131836, special=false, text= trait}, {id=261, logprob=-4.7683716E-7, special=false, text=er}, {id=198, logprob=-0.034698486, special=false, text=
+}, {id=257, logprob=-1.1920929E-7, special=false, text=    }, {id=353, logprob=-1.0728836E-6, special=false, text= *}, {id=569, logprob=-1.1920929E-7, special=false, text= @}, {id=689, logprob=-0.5229492, special=false, text=return}, {id=6185, logprob=-0.56640625, special=false, text= une}, {id=10528, logprob=-0.010665894, special=false, text= HashMap}, {id=9753, logprob=-0.6245117, special=false, text= avec}, {id=3541, logprob=-8.840561E-4, special=false, text= les}, {id=141067, logprob=-3.1995773E-4, special=false, text= éléments}, {id=21572, logprob=-0.42016602, special=false, text= comme}, {id=1185, logprob=-0.026031494, special=false, text= cl}, {id=5397, logprob=-0.0051727295, special=false, text=és}, {id=1842, logprob=-1.1920929E-5, special=false, text= et}, {id=42053, logprob=-0.09136963, special=false, text= leurs}, {id=14937, logprob=-4.1127205E-4, special=false, text= indices}, {id=21572, logprob=-0.003780365, special=false, text= comme}, {id=95935, logprob=-3.3521652E-4, special=false, text= valeurs}, {id=198, logprob=-6.2823296E-5, special=false, text=
+}, {id=257, logprob=-3.695488E-6, special=false, text=    }, {id=735, logprob=-0.0030822754, special=false, text= */
+}, {id=262, logprob=-1.4305115E-6, special=false, text=   }, {id=584, logprob=-1.9931793E-4, special=false, text= public}, {id=1099, logprob=-2.3841858E-6, special=false, text= static}, {id=5027, logprob=-0.66552734, special=false, text= Map}, {id=20549, logprob=-0.09893799, special=false, text=<Object}, {id=11, logprob=-1.001358E-5, special=false, text=,}, {id=4440, logprob=-4.7326088E-5, special=false, text= Integer}, {id=29, logprob=-2.1457672E-6, special=false, text=>}, {id=11625, logprob=-0.024032593, special=false, text= solve}, {id=10278, logprob=-0.0010557175, special=false, text=(List}, {id=20549, logprob=-0.0072135925, special=false, text=<Object}, {id=29, logprob=-3.2186508E-6, special=false, text=>}, {id=3589, logprob=-1.66893E-6, special=false, text= items}, {id=8, logprob=-1.66893E-6, special=false, text=)}, {id=341, logprob=-6.0796738E-6, special=false, text= {
+}, {id=286, logprob=-1.2278557E-5, special=false, text=       }, {id=5027, logprob=-0.09814453, special=false, text= Map}, {id=20549, logprob=-1.1920929E-7, special=false, text=<Object}, {id=11, logprob=-9.536743E-7, special=false, text=,}, {id=4440, logprob=-1.5497208E-6, special=false, text= Integer}, {id=29, logprob=-2.3841858E-6, special=false, text=>}, {id=1509, logprob=-0.36279297, special=false, text= item}, {id=1552, logprob=-0.6738281, special=false, text=Index}, {id=2227, logprob=-1.1205673E-5, special=false, text=Map}, {id=284, logprob=-3.5762787E-7, special=false, text= =}, {id=501, logprob=-5.841255E-6, special=false, text= new}, {id=10528, logprob=-1.0609627E-5, special=false, text= HashMap}, {id=10874, logprob=-0.041748047, special=false, text=<>();
+}, {id=286, logprob=-0.011772156, special=false, text=       }, {id=369, logprob=-0.005844116, special=false, text= for}, {id=320, logprob=-8.106232E-6, special=false, text= (}, {id=396, logprob=-5.8174133E-5, special=false, text=int}, {id=600, logprob=-0.01184082, special=false, text= i}, {id=284, logprob=-4.7683716E-7, special=false, text= =}, {id=220, logprob=-2.026558E-6, special=false, text= }, {id=15, logprob=-1.1920929E-7, special=false, text=0}, {id=26, logprob=-2.1576881E-5, special=false, text=;}, {id=600, logprob=-8.34465E-7, special=false, text= i}, {id=366, logprob=-1.7881393E-6, special=false, text= <}, {id=3589, logprob=-1.4305115E-6, special=false, text= items}, {id=2486, logprob=-4.7683716E-7, special=false, text=.size}, {id=2129, logprob=-1.9073486E-6, special=false, text=();}, {id=600, logprob=-5.9080124E-4, special=false, text= i}, {id=2457, logprob=-4.7683716E-7, special=false, text=++)}, {id=341, logprob=-2.503395E-6, special=false, text= {
+}, {id=310, logprob=-1.41859055E-5, special=false, text=           }, {id=1509, logprob=-0.001499176, special=false, text= item}, {id=1552, logprob=-7.1525574E-7, special=false, text=Index}, {id=2227, logprob=-1.1920929E-7, special=false, text=Map}, {id=3597, logprob=-2.503395E-6, special=false, text=.put}, {id=24337, logprob=-4.887581E-6, special=false, text=(items}, {id=670, logprob=-4.7683716E-7, special=false, text=.get}, {id=1956, logprob=-1.0728836E-6, special=false, text=(i}, {id=701, logprob=-4.053116E-6, special=false, text=),}, {id=600, logprob=-5.9604645E-7, special=false, text= i}, {id=317, logprob=-2.0980835E-5, special=false, text=);
+}, {id=286, logprob=-4.053116E-6, special=false, text=       }, {id=456, logprob=-1.0251999E-5, special=false, text= }
+}, {id=286, logprob=-7.2717667E-6, special=false, text=       }, {id=470, logprob=-1.4305115E-6, special=false, text= return}, {id=1509, logprob=-2.2649765E-6, special=false, text= item}, {id=1552, logprob=-2.6226044E-6, special=false, text=Index}, {id=2227, logprob=-2.7418137E-6, special=false, text=Map}, {id=280, logprob=-1.5735626E-5, special=false, text=;
+}, {id=262, logprob=-1.66893E-6, special=false, text=   }, {id=555, logprob=-5.0115585E-4, special=false, text= }
+
+}, {id=262, logprob=-3.695488E-6, special=false, text=   }, {id=1554, logprob=-0.08935547, special=false, text= /**
+}, {id=257, logprob=-2.9802322E-6, special=false, text=    }, {id=353, logprob=-6.556511E-6, special=false, text= *}, {id=42931, logprob=-0.11254883, special=false, text= Mé}, {id=339, logprob=-5.2452087E-6, special=false, text=th}, {id=534, logprob=-1.7881393E-6, special=false, text=ode}, {id=7394, logprob=-0.03463745, special=false, text= princip}, {id=1574, logprob=-2.3841858E-7, special=false, text=ale}, {id=4914, logprob=-0.020568848, special=false, text= pour}, {id=37111, logprob=-0.044769287, special=false, text= tester}, {id=1187, logprob=-0.12017822, special=false, text= la}, {id=36317, logprob=-1.0166016, special=false, text= classe}, {id=624, logprob=-0.4489746, special=false, text=.
+}, {id=257, logprob=-3.0994415E-6, special=false, text=    }, {id=1213, logprob=-0.018600464, special=false, text= *
+}, {id=257, logprob=-4.7683716E-7, special=false, text=    }, {id=353, logprob=-8.821487E-6, special=false, text= *}, {id=569, logprob=-5.9604645E-7, special=false, text= @}, {id=903, logprob=-3.4570694E-6, special=false, text=param}, {id=2827, logprob=-4.053116E-6, special=false, text= args}, {id=3541, logprob=-0.6074219, special=false, text= les}, {id=5977, logprob=-0.0013771057, special=false, text= arguments}, {id=409, logprob=-0.0032138824, special=false, text= de}, {id=1187, logprob=-0.042236328, special=false, text= la}, {id=26814, logprob=-0.007396698, special=false, text= ligne}, {id=409, logprob=-1.0728836E-6, special=false, text= de}, {id=67751, logprob=-0.005760193, special=false, text= commande}, {id=320, logprob=-0.5830078, special=false, text= (}, {id=6280, logprob=-0.008804321, special=false, text=non}, {id=41487, logprob=-1.3315678E-4, special=false, text= utilis}, {id=5397, logprob=-2.706051E-4, special=false, text=és}, {id=340, logprob=-0.002954483, special=false, text=)
+}, {id=257, logprob=-2.026558E-6, special=false, text=    }, {id=735, logprob=-3.027916E-5, special=false, text= */
+}, {id=262, logprob=-4.7683716E-7, special=false, text=   }, {id=584, logprob=-4.529953E-6, special=false, text= public}, {id=1099, logprob=-2.3841858E-7, special=false, text= static}, {id=737, logprob=-1.1920929E-7, special=false, text= void}, {id=1887, logprob=-9.536743E-7, special=false, text= main}, {id=2242, logprob=-2.2649765E-6, special=false, text=(String}, {id=1294, logprob=-2.2649765E-6, special=false, text=[]}, {id=2827, logprob=-1.5497208E-6, special=false, text= args}, {id=8, logprob=-2.3841858E-7, special=false, text=)}, {id=341, logprob=-1.1920929E-6, special=false, text= {
+}, {id=286, logprob=-1.0728836E-6, special=false, text=       }, {id=1759, logprob=-0.0028495789, special=false, text= List}, {id=3464, logprob=-0.6977539, special=false, text=<String}, {id=29, logprob=-2.6226044E-6, special=false, text=>}, {id=3589, logprob=-0.01878357, special=false, text= items}, {id=284, logprob=-8.893013E-4, special=false, text= =}, {id=1759, logprob=-1.0383129E-4, special=false, text= List}, {id=10229, logprob=-1.1920929E-6, special=false, text=.of}, {id=445, logprob=-8.106232E-6, special=false, text=("}, {id=22377, logprob=-0.08673096, special=false, text=apple}, {id=497, logprob=-4.887581E-6, special=false, text=",}, {id=330, logprob=0.0, special=false, text= "}, {id=87747, logprob=-4.172325E-5, special=false, text=banana}, {id=497, logprob=-7.1525574E-6, special=false, text=",}, {id=330, logprob=-3.5762787E-7, special=false, text= "}, {id=331, logprob=-0.001748085, special=false, text=ch}, {id=5400, logprob=-7.748604E-6, special=false, text=erry}, {id=797, logprob=-0.31347656, special=false, text=");
+}, {id=286, logprob=-7.212162E-5, special=false, text=       }, {id=5027, logprob=-1.333952E-4, special=false, text= Map}, {id=3464, logprob=-0.0423584, special=false, text=<String}, {id=11, logprob=-7.1525574E-7, special=false, text=,}, {id=4440, logprob=-3.5762787E-7, special=false, text= Integer}, {id=29, logprob=-9.536743E-7, special=false, text=>}, {id=1509, logprob=-0.8989258, special=false, text= item}, {id=1552, logprob=-0.05984497, special=false, text=Index}, {id=2227, logprob=-2.2244453E-4, special=false, text=Map}, {id=284, logprob=0.0, special=false, text= =}, {id=11625, logprob=-0.0019683838, special=false, text= solve}, {id=24337, logprob=-1.5735626E-5, special=false, text=(items}, {id=317, logprob=-0.123291016, special=false, text=);
+}, {id=286, logprob=-0.21020508, special=false, text=       }, {id=739, logprob=-0.008926392, special=false, text= System}, {id=2532, logprob=-7.1525574E-6, special=false, text=.out}, {id=2913, logprob=-4.339218E-5, special=false, text=.println}, {id=445, logprob=-0.27392578, special=false, text=("}, {id=1234, logprob=-1.2705078, special=false, text=Item}, {id=8008, logprob=-0.5239258, special=false, text= Index}, {id=5027, logprob=-0.0019292831, special=false, text= Map}, {id=25, logprob=-0.0013074875, special=false, text=:}, {id=330, logprob=-1.8119812E-5, special=false, text= "}, {id=488, logprob=-1.7881393E-6, special=false, text= +}, {id=1509, logprob=-1.1920929E-6, special=false, text= item}, {id=1552, logprob=-5.4836273E-6, special=false, text=Index}, {id=2227, logprob=-1.3113022E-6, special=false, text=Map}, {id=317, logprob=-0.15808105, special=false, text=);
+}, {id=262, logprob=-0.5654297, special=false, text=   }, {id=456, logprob=-1.5223026E-4, special=false, text= }
+}, {id=532, logprob=-2.4294853E-4, special=false, text=}
+}, {id=73594, logprob=-0.35766602, special=false, text=```}, {id=151645, logprob=-0.020202637, special=true, text=<|im_end|>}], finish_reason=eos_token, messageType=ASSISTANT, generated_tokens=303, prefill=[]}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]]
+2026-08-26 15:37:49 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-26 15:37:50 [tomcat-shutdown] INFO  traceId= spanId= o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-26 15:37:59 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Starting GenAiJavaSpringApplication using Java 17.0.9 with PID 9844 (D:\workspace\gen-ai-java-spring\target\classes started by abennani in D:\workspace\gen-ai-java-spring)
+2026-08-26 15:37:59 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-26 15:38:01 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-08-26 15:38:01 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-08-26 15:38:01 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-26 15:38:01 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-08-26 15:38:02 [main] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-08-26 15:38:02 [main] INFO  traceId= spanId= o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2128 ms
+2026-08-26 15:38:03 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-26 15:38:03 [main] INFO  traceId= spanId= o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-08-26 15:38:03 [main] INFO  traceId= spanId= c.g.j.s.GenAiJavaSpringApplication - Started GenAiJavaSpringApplication in 5.343 seconds (process running for 6.391)
+2026-08-26 15:38:46 [http-nio-8081-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-26 15:38:46 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-26 15:38:46 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-26 15:38:59 [http-nio-8081-exec-1] INFO  traceId= spanId= c.g.j.s.c.h.HuggingFaceController - Generated code for message: ChatResponse [metadata={ id: chatcmpl-Hc7jw4, usage: DefaultUsage{promptTokens=168, completionTokens=516, totalTokens=684}, rateLimit: { @type: org.springframework.ai.openai.metadata.OpenAiRateLimit, requestsLimit: null, requestsRemaining: null, requestsReset: null, tokensLimit: null; tokensRemaining: null; tokensReset: null } }, generations=[Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=```java
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Classe pour résoudre le problème d'accès en O(1) à une liste d'éléments.
+ */
+public class FastLookup {
+
+    /**
+     * Méthode principale pour résoudre le problème.
+     *
+     * @param items La liste d'éléments à traiter.
+     * @return Une Map où les clés sont les éléments de la liste et les valeurs sont des indices.
+     */
+    public static Map<Object, Integer> solve(List<Object> items) {
+        if (items == null || items.isEmpty()) {
+            throw new IllegalArgumentException("La liste ne peut pas être vide ou null");
+        }
+
+        Map<Object, Integer> lookup = new HashMap<>(items.size());
+        for (int i = 0; i < items.size(); i++) {
+            lookup.put(items.get(i), i);
+        }
+        return lookup;
+    }
+
+    /**
+     * Point d'entrée principal pour tester la méthode solve().
+     *
+     * @param args Arguments de ligne de commande (non utilisés).
+     */
+    public static void main(String[] args) {
+        List<String> items = List.of("apple", "banana", "cherry");
+        Map<String, Integer> lookup = solve(items);
+
+        System.out.println("Chercher 'banana': " + lookup.get("banana")); // Devrait afficher 1
+        System.out.println("Chercher 'grape': " + lookup.get("grape"));   // Devrait afficher null
+    }
+}
+```
+
+Ce code implémente l'algorithme suivant :
+
+1. **Classe `FastLookup`** : Contient la méthode principale `solve()`.
+
+2. **Méthode `solve(List<Object> items)`** :
+   - Vérifie si la liste est vide ou null et lance une exception si c'est le cas.
+   - Utilise un `HashMap` pour stocker chaque élément de la liste avec son indice comme valeur.
+   - Retourne le `HashMap`.
+
+3. **Méthode `main(String[] args)`** :
+   - Crée une liste d'éléments exemple.
+   - Appelle la méthode `solve()` pour obtenir la carte de lookup.
+   - Affiche les résultats de recherche pour quelques éléments.
+
+Cette solution offre un accès en temps constant (`O(1)`) aux éléments de la liste via la carte de lookup., metadata={role=ASSISTANT, messageType=ASSISTANT, finishReason=STOP, refusal=, index=0, annotations=[{}], id=chatcmpl-Hc7jw4}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='STOP', filters=0, metadata=0]]]]
