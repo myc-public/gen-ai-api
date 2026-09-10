@@ -2,7 +2,7 @@ pipeline {
     agent {
         kubernetes {
             cloud 'openshift'
-            yamlFile 'https://raw.githubusercontent.com/gregorie769-star/jenkins-platform/main/agents/java/pod-template.yaml'
+            yamlFile 'https://raw.githubusercontent.com/myc-public/jenkins-platform/main/agents/java/pod-template.yaml'
             agentContainer 'maven'
             agentInjection true
         }
