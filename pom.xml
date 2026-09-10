@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.genai.java.spring</groupId>
-    <artifactId>gen-ai-java-spring</artifactId>
+    <artifactId>gen-ai-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gen-ai-java-spring</name>
+    <name>gen-ai-api</name>
     <description>Gen AI with Java and Spring Boot</description>
 
     <parent>
